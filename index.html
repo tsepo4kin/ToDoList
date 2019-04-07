@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Todo/title>
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">	
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" > 
+		<style>
+			.cursor {
+				cursor: pointer;
+			}
+
+			.notification-alert {
+				display: none;
+			}
+
+			.notification-alert.show {
+				display: block;
+				position: absolute;
+				z-index: 9999;
+				margin: 0 auto;
+				width: 33%;
+				height: 48px;
+				left: 34%;
+				top: 0;
+				font-size: 12px;
+			}
+
+			.checked {
+				text-decoration: line-through;
+				color: gray;
+			}
+
+			.empty-alert {
+				display: none;
+			}
+
+		</style>
+	</head>
+	<body>
+		
+		<section class="task-wrap mt-5">
+			<div class="container">
+				<div class="alert notification-alert"></div>
+				<div class="card mb-3">
+					<div class="card-header">
+						Add to Do
+					</div>
+					<div class="card-body">
+						<form name="addToDoItem">
+							<div class="form-group">
+								<label for="toDo-text">Task</label>
+								<input type="text" id="toDoText" class="form-control" autocomplete="off">
+								<div class="invalid-feedback">
+									Please enter some text
+								</div>
+							</div>
+							<button class="btn btn-primary" type="submit">Add</button>
+						</form>
+					</div>
+				</div>
+
+				<div class="card mb-3">
+					<div class="card-header">
+						Search
+					</div>
+
+					<div class="card-body">
+						<form name="searchTodoItem">
+							<div class="form-group">
+								<label for="todoText">Search text</label>
+								<input type="text" class="form-control" id="searchItem">
+								<div class="invalid-feedback">
+									Please enter some text
+								</div>
+							</div>
+							<button class="btn btn-primary search-btn">Search</button>
+							<button class="btn btn-warning rest-btn">Reset search</button>
+						</form>
+					</div>
+				</div>
+
+				<div class="card mb-3">
+					<div class="card-header">
+						Task-list
+					</div>
+					<div class="card-body">
+						<div class="alert alert-info empty-alert">Empty</div>
+						<ul class="list-group main">
+						  					<!-- <li class="list-group-item">Cras justo odio</li> -->
+						</ul>
+					</div>
+				</div>
+				<div class="container mt-3 d-flex">
+					<button class="btn btn-primary clear-btn">Clear</button>
+					<a href='priority.html' class="btn btn-primary ml-auto">Priority tasks</a>
+				</div>
+			</div>
+		</section>
+	<script src="id.js"></script>
+	 <script src="tasks.js"></script>
+	<script src="localStorage.js"></script>
+	<script src="notification.js"></script>
+	<script src="observer.js"></script>	
+	<script src="UI.js"></script>	
+	<script src="app.js"></script>	
+	</body>
+</html>
